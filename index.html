@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franz Berja — Personal Site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerald Franz Berja — CS Student & Aspiring Web Developer</title>
+<meta name="description" content="Portfolio of Gerald Franz I. Berja, Computer Science student at AISAT seeking an OJT / internship in web development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!--  HEADER  -->
 <header>
     <a href="#" class="logo"><span class="red">&lt;/</span>franz<span class="red">&gt;</span></a>
-    <nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="primaryNav">
         <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" class="nav-cta" download>Resume</a>
     </nav>
 </header>
 
-<!--  MAIN  -->
 <main>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="hero-left">
-            <div class="hero-tag">Available for work</div>
-            <h1>Hello, I'm <em>Franz</em><br>Web Developer.</h1>
-            <p>I build clean, fast, and beautiful websites using HTML and CSS. Currently learning and leveling up my skills every day.</p>
+            <div class="hero-tag">Open to OJT or Internship — 2026</div>
+            <h1>Hello, I'm <em>Franz</em><br>Aspiring Web Developer.</h1>
+            <p>Computer Science student at AISAT who builds responsive, user-focused websites with HTML, CSS, JavaScript, and React. Comfortable with Git/GitHub workflows and looking for an OJT or internship to put that into practice.</p>
             <div class="hero-btns">
-                <a href="#projects" class="btn-primary">View My Work</a>
-                <a href="#contact" class="btn-ghost">Get in Touch</a>
+                <a href="resume/resume.pdf" class="btn-primary" download>Download Resume</a>
+                <a href="#projects" class="btn-ghost">View My Work</a>
             </div>
         </div>
 
@@ -44,25 +51,25 @@
                 </div>
                 <div class="line"><span class="ln">1</span><span><span class="kw">const</span> <span class="fn">Franz</span> = {</span></div>
                 <div class="line"><span class="ln">2</span><span>&nbsp;&nbsp;name: <span class="st">"Gerald Franz I. Berja"</span>,</span></div>
-                <div class="line"><span class="ln">3</span><span>&nbsp;&nbsp;age: <span class="nr">23</span>,</span></div>
-                <div class="line"><span class="ln">4</span><span>&nbsp;&nbsp;role: <span class="st">"Web Developer"</span>,</span></div>
-                <div class="line"><span class="ln">5</span><span>&nbsp;&nbsp;skills: [<span class="st">"HTML"</span>, <span class="st">"CSS"</span>],</span></div>
-                <div class="line"><span class="ln">6</span><span>&nbsp;&nbsp;available: <span class="kw">true</span></span></div>
+                <div class="line"><span class="ln">3</span><span>&nbsp;&nbsp;school: <span class="st">"AISAT"</span>,</span></div>
+                <div class="line"><span class="ln">4</span><span>&nbsp;&nbsp;course: <span class="st">"BS Computer Science"</span>,</span></div>
+                <div class="line"><span class="ln">5</span><span>&nbsp;&nbsp;grad: <span class="nr">2027</span>,</span></div>
+                <div class="line"><span class="ln">6</span><span>&nbsp;&nbsp;seekingOJT: <span class="kw">true</span></span></div>
                 <div class="line"><span class="ln">7</span><span>}</span></div>
             </div>
 
             <div class="stats-row">
                 <div class="stat-box">
-                    <span class="stat-num">23</span>
-                    <span class="stat-lbl">Years Old</span>
+                    <span class="stat-num">2027</span>
+                    <span class="stat-lbl">Grad Year</span>
                 </div>
                 <div class="stat-box">
-                    <span class="stat-num">10+</span>
+                    <span class="stat-num">4+</span>
                     <span class="stat-lbl">Projects</span>
                 </div>
                 <div class="stat-box">
-                    <span class="stat-num">∞</span>
-                    <span class="stat-lbl">Learning</span>
+                    <span class="stat-num">Git</span>
+                    <span class="stat-lbl">Version Control</span>
                 </div>
             </div>
         </div>
@@ -70,37 +77,58 @@
 
     <hr class="section-divider">
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
+    <section class="about reveal" id="about">
         <div class="section-label">About Me</div>
         <div class="about-grid">
             <div>
+                <div class="photo-frame">
+                    <img src="image/profile.png" alt="Gerald Franz Berja">
+                </div>
+
                 <h2>Who am I?</h2>
-                <p>I'm Franz, a 23-year-old web developer from the Philippines who is passionate about building things on the web.</p>
-                <p>I started learning HTML and CSS and fell in love with the idea of creating something from nothing — just code and a browser.</p>
-                <p>When I'm not coding, I'm on CSS Battle sharpening my skills or exploring new design ideas.</p>
+                <p>I'm Franz, a Computer Science student from General Trias, Cavite, currently studying at AISAT. I build clean, responsive websites and I'm always looking for the next thing to learn — right now that's deepening my React and Tailwind CSS skills.</p>
+                <p>I like turning a blank file into something that actually works in a browser.</p>
+                <p>I'm currently looking for an <strong>OJT or internship</strong> where I can apply what I've learned and keep growing as a developer.</p>
             </div>
+
             <div>
-                <div class="skills-list">
-                    <div class="skill-row">
-                        <div class="skill-top"><span class="skill-name">HTML</span><span class="skill-pct">90%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+                <div class="skills-groups">
+                    <div class="skill-group">
+                        <h4>Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
                     </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span class="skill-name">CSS</span><span class="skill-pct">75%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+                    <div class="skill-group">
+                        <h4>Web Development</h4>
+                        <div class="skill-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Responsive Design</span>
+                        </div>
                     </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">30%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width:30%"></div></div>
+                    <div class="skill-group">
+                        <h4>Tools &amp; Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">VS Code</span>
+                        </div>
                     </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span class="skill-name">Java</span><span class="skill-pct">85%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">50%</span></div>
-                        <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
-                    </div>
+                    <div class="skill-group">
+                        <h4>Core Competencies</h4>
+                        <div class="skill-tags">
+                            <span class="tag">Communication</span>
+                            <span class="tag">Problem-Solving</span>
+                            <span class="tag">Attention to Detail</span>
+                            <span class="tag">Adaptability</span>
+                            <span class="tag">Time Management</span>
+                            <span class="tag">Team Collaboration</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,37 +137,70 @@
 
     <hr class="section-divider">
 
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
+    <section class="education reveal" id="education">
+        <div class="section-label">Education</div>
+        <div class="education-list">
+            <div class="education-item">
+                <div class="edu-marker">
+                    <span class="edu-year">Expected 2027</span>
+                </div>
+                <div class="edu-body">
+                    <h3>BS Computer Science</h3>
+                    <p class="edu-school">Asian Institute of Science and Technology (AISAT) — Dasmariñas, Cavite</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="edu-marker">
+                    <span class="edu-year">2021</span>
+                </div>
+                <div class="edu-body">
+                    <h3>Senior High School — TVL, Programming Track</h3>
+                    <p class="edu-school">AMA Las Piñas — Las Piñas City</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="projects reveal" id="projects">
         <div class="section-label">My Projects</div>
         <div class="projects-grid">
             <div class="project-card">
-                <span class="project-icon">🎂</span>
-                <h3>Birthday Page</h3>
-                <p>A personal birthday celebration page with animations, gift box hover effects, and a reaction GIF.</p>
+                <span class="project-icon">🧩</span>
+                <h3>Team Portfolio Website</h3>
+                <p>Academic group project. Collaborated on a multi-page portfolio site and independently handled the UI design and component development.</p>
                 <div class="project-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Tailwind CSS</span>
                 </div>
             </div>
             <div class="project-card">
-                <span class="project-icon">🔍</span>
-                <h3>Google Clone</h3>
-                <p>Recreated the Google homepage layout to practice flexbox, positioning, and custom fonts.</p>
+                <span class="project-icon">💻</span>
+                <h3>Personal Portfolio Website</h3>
+                <p>This site — a fully responsive personal portfolio built to showcase my skills and completed projects.</p>
                 <div class="project-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">Fonts</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
                 </div>
             </div>
             <div class="project-card">
                 <span class="project-icon">☕</span>
                 <h3>The Boru House</h3>
-                <p>A cozy coffee shop website designed with a warm aesthetic, featuring a menu, ambiance gallery, and a welcoming layout for coffee lovers.</p>
+                <p>A concept website for a coffee shop, applying modern UI design principles and a mobile-friendly layout.</p>
                 <div class="project-tags">
                     <span class="tag">HTML</span>
                     <span class="tag">CSS</span>
-                    <span class="tag">Images</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <span class="project-icon">📚</span>
+                <h3>Academic Programming Projects</h3>
+                <p>Coursework projects that strengthened logic building, structured programming, and front-end fundamentals.</p>
+                <div class="project-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">JavaScript</span>
                 </div>
             </div>
         </div>
@@ -147,32 +208,32 @@
 
     <hr class="section-divider">
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <section class="contact reveal" id="contact">
         <div class="section-label" style="justify-content:center; margin-bottom:24px;">Contact</div>
         <h2>Let's work<br><em style="color:var(--accent);font-style:normal;">together.</em></h2>
-        <p>Have a project in mind? Feel free to reach out!</p>
+        <p>Looking for an OJT or internship opportunity? Let's connect.</p>
         <div class="contact-links">
-            <a href="mailto:gfranzb05@gmail.com" class="contact-link">Email Me</a>
-            <a href="https://www.facebook.com/geraldfranz.berja.5" class="contact-link" target="_blank">Facebook</a>
-            <a href="https://github.com/gfranzb05-blip" class="contact-link" target="_blank">GitHub</a>
-            <a href="https://www.instagram.com/gfranzzz_/" class="contact-link" target="_blank">Instagram</a>
+            <a href="mailto:aisat.berja235979@gmail.com" class="contact-link">Email Me</a>
+            <a href="tel:+639516476049" class="contact-link">0951-647-6049</a>
+            <a href="https://github.com/geraldfranz" class="contact-link" target="_blank" rel="noopener">GitHub</a>
+            <a href="resume.pdf" class="contact-link" download>Download Resume</a>
         </div>
     </section>
 
 </main>
 
-<!--  FOOTER  -->
 <footer>
     <div class="footer-left">
-        © 2026 <span>Franz Berja</span> — Built with HTML & CSS
+        © <span id="year"></span> <span>Gerald Franz Berja</span> — Built with HTML, CSS &amp; JavaScript
     </div>
     <div class="footer-right">
         <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
