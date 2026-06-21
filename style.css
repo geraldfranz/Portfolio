@@ -489,7 +489,13 @@ main { flex: 1; }
 .project-card:hover { border-color: var(--accent); transform: translateY(-4px); }
 .project-card:hover::before { transform: scaleX(1); }
 
-.project-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+.project-icon img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin-bottom: 14px;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(8%) saturate(847%) hue-rotate(11deg) brightness(92%) contrast(87%);
+}
 
 .project-card h3 {
     font-family: var(--heading);
